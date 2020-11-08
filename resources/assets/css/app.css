@@ -17,22 +17,12 @@ html, body {
     justify-content: center;
 }
 
-.position-ref {
-    position: relative;
-}
-
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
-}
-
-.content {
+.text-center {
     text-align: center;
 }
 
-.title {
-    font-size: 84px;
+.icon {
+    cursor: pointer;
 }
 
 .links > a {
@@ -47,4 +37,27 @@ html, body {
 
 .m-b-md {
     margin-bottom: 30px;
+}
+
+.hide-desktop {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hide-desktop {
+        display: inherit;
+    }
+    .hide-tablet {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .hide-desktop,
+    .hide-tablet {
+        display: inherit;
+    }
+    .hide-mobile {
+        display: none;
+    }
 }

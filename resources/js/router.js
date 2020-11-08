@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 //Page
-import Home from './components/Home.vue'
-import ExampleComponent from './components/ExampleComponent.vue'
+import Dashboard from './views/Dashboard.vue'
+import Register from './views/Register.vue'
 
 Vue.use(VueRouter)
 
@@ -11,13 +11,17 @@ export default new VueRouter({
     routes: [
         {
             path: '/',
-            component: Home,
-            name: 'Home'
+            redirect: "/dashboard"
         },
         {
-            path: '/example-component',
-            component: ExampleComponent,
-            name: 'Example Component'
+            path: '/dashboard',
+            name: 'dashboard',
+            component: Dashboard
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: Register
         }
     ],
     mode: 'history'
